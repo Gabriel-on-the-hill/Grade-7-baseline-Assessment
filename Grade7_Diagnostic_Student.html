@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 7 Baseline Diagnostic Assessment</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 44px;
+    background: #fff;
+  }
+  h1 { font-size: 1.5em; margin: 0 0 6px; }
+  h2 { font-size: 1.15em; margin: 28px 0 6px; }
+  h3 { font-size: 1.05em; margin: 0 0 4px; text-align: center; }
+
+  .main-title  { color: #1a4e8c; border-bottom: 3px solid #1a4e8c; padding-bottom: 6px; }
+  .math-title  { color: #1a4e8c; border-bottom: 2px solid #1a4e8c; padding-bottom: 4px; }
+  .ela-title   { color: #1a6b3c; border-bottom: 2px solid #1a6b3c; padding-bottom: 4px; }
+  .pass-title  { color: #1a6b3c; margin: 22px 0 4px; }
+
+  .info-row {
+    display: flex; gap: 28px; flex-wrap: wrap;
+    margin: 10px 0 22px; font-size: 13px;
+  }
+  .info-field {
+    display: inline-block;
+    border-bottom: 1px solid #444;
+    min-width: 210px;
+  }
+
+  .band-math {
+    background: #e8f0fb;
+    border-left: 5px solid #1a4e8c;
+    padding: 7px 14px;
+    margin: 16px 0;
+    font-weight: bold; font-size: 13px;
+  }
+  .band-ela {
+    background: #f0f7f0;
+    border-left: 5px solid #1a6b3c;
+    padding: 7px 14px;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  .sa-prompt {
+    background: #f0f7f0;
+    border-left: 5px solid #1a6b3c;
+    padding: 9px 14px;
+    margin: 14px 0;
+  }
+
+  .question { margin: 22px 0; }
+  .qlabel { font-weight: bold; font-size: 15px; margin-bottom: 6px; color: #222; }
+
+  ol.ch { list-style: none; padding: 0 0 0 16px; margin: 8px 0; }
+  ol.ch li { margin: 5px 0; }
+  ol.ch li::before { content: attr(data-l) ". "; font-weight: bold; display: inline-block; width: 24px; }
+
+  .ans-line {
+    display: inline-block;
+    border-bottom: 1.5px solid #333;
+    width: 170px;
+    margin-left: 8px;
+    vertical-align: bottom;
+  }
+  .workspace {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    height: 72px;
+    margin: 10px 0 4px;
+    border-radius: 2px;
+  }
+
+  /* Inline fractions */
+  .fr {
+    display: inline-flex; flex-direction: column;
+    align-items: center; vertical-align: middle;
+    font-size: 0.88em; line-height: 1.15; margin: 0 2px;
+  }
+  .fr .n { border-bottom: 1px solid #333; padding: 0 3px; }
+  .fr .d { padding: 0 3px; }
+
+  .diagwrap { text-align: center; margin: 14px auto; }
+
+  .pass-box {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-left: 4px solid #1a6b3c;
+    padding: 18px 22px;
+    margin: 12px 0;
+    border-radius: 2px;
+  }
+  .pass-box p { margin: 6px 0; text-indent: 0; }
+  .pnum { font-weight: bold; margin-right: 6px; }
+  .byline { font-style: italic; text-align: center; color: #555; font-size: 13px; margin: 0 0 14px; }
+  .pullq {
+    border-left: 3px solid #aaa;
+    padding: 5px 14px;
+    margin: 8px 16px;
+    font-style: italic; color: #333;
+  }
+  .fn {
+    font-size: 12px; color: #555;
+    border-top: 1px solid #ccc;
+    margin-top: 10px; padding-top: 7px;
+  }
+  .context { font-style: italic; color: #444; font-size: 13px; margin: 6px 0; }
+
+  .sa-lines { margin: 10px 0; }
+  .sa-line { display: block; border-bottom: 1px solid #aaa; height: 16px; margin: 20px 0; }
+
+  .sec-end { text-align: center; color: #777; font-style: italic; margin: 22px 0; font-size: 13px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 18px 0; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 28px; }
+
+  @media print {
+    body { padding: 14px 20px; font-size: 13px; }
+    .no-break { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="main-title">Grade 7 Baseline Diagnostic Assessment</h1>
+
+<div class="info-row">
+  <span>Student Name:&nbsp;<span class="info-field">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+  <span>Date:&nbsp;<span class="info-field">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+  <span>Grade:&nbsp;<strong>7</strong></span>
+</div>
+
+<p><strong>Instructions:</strong> This assessment has two sections — Mathematics and English Language Arts. For multiple-choice questions, circle the letter of the best answer. For short-answer questions, write your answer in the space provided. Show your work where asked.</p>
+<p><strong>Total Time: approximately 55 minutes</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Section A (Mathematics): ~20 min&nbsp;&nbsp;|&nbsp;&nbsp;Section B (ELA): ~35 min</p>
+
+<hr>
+
+<!-- ═══════════════════════ SECTION A: MATH ═══════════════════════ -->
+<h1 class="math-title">SECTION A: MATHEMATICS</h1>
+
+<div class="band-math">NO CALCULATOR &mdash; Questions 1&ndash;5</div>
+
+<!-- Q1 -->
+<div class="question no-break">
+  <div class="qlabel">Question 1</div>
+  <p>Evaluate:</p>
+  <p style="font-size:1.2em; padding-left:22px; margin:10px 0;">
+    4<span class="fr"><span class="n">2</span><span class="d">3</span></span>
+    &nbsp;&minus;&nbsp;
+    (&minus;1<span class="fr"><span class="n">4</span><span class="d">5</span></span>)
+  </p>
+  <ol class="ch">
+    <li data-l="A">&minus;7<span class="fr"><span class="n">2</span><span class="d">15</span></span></li>
+    <li data-l="B">2<span class="fr"><span class="n">13</span><span class="d">15</span></span></li>
+    <li data-l="C">6<span class="fr"><span class="n">7</span><span class="d">15</span></span></li>
+    <li data-l="D">7<span class="fr"><span class="n">2</span><span class="d">15</span></span></li>
+  </ol>
+</div>
+<hr>
+
+<!-- Q2 -->
+<div class="question no-break">
+  <div class="qlabel">Question 2</div>
+  <p>Solve for <em>m</em>:</p>
+  <p style="font-size:1.2em; padding-left:22px; margin:10px 0;">
+    &minus;<span class="fr"><span class="n">2</span><span class="d">9</span></span><em>m</em>&nbsp;+&nbsp;12&nbsp;=&nbsp;&minus;8
+  </p>
+  <p>Answer:&nbsp;<span class="ans-line"></span>&nbsp;&nbsp;<em>Show your work below.</em></p>
+  <div class="workspace"></div>
+</div>
+<hr>
+
+<!-- Q3 -->
+<div class="question no-break">
+  <div class="qlabel">Question 3</div>
+  <p>While on a camping trip, Calvin was monitoring the temperature.</p>
+  <ul>
+    <li>In the afternoon, the temperature was &minus;4&deg;C.</li>
+    <li>As the evening progressed, the temperature <strong>dropped</strong> 7&deg;C.</li>
+    <li>By mid-morning the next day, the temperature had <strong>risen</strong> 3&deg;C.</li>
+  </ul>
+  <p>What was the temperature, in degrees Celsius, after all three changes?</p>
+  <p>Answer:&nbsp;<span class="ans-line"></span></p>
+</div>
+<hr>
+
+<!-- Q4  — DIAGRAM: Calories from graph -->
+<div class="question no-break">
+  <div class="qlabel">Question 4</div>
+  <p>The graph below shows how many calories are in a store&rsquo;s best-selling candy.</p>
+
+  <div class="diagwrap">
+    <svg width="320" height="210" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line graph: Best-Selling Candy. Y-axis: Calories 0 to 120. X-axis: Pieces of Candy 0 to 10. Line passes through origin and point (8,120).">
+      <!-- Title -->
+      <text x="175" y="14" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#222">Best-Selling Candy</text>
+      <!-- Axes -->
+      <line x1="55" y1="175" x2="295" y2="175" stroke="#333" stroke-width="2"/>
+      <line x1="55" y1="18"  x2="55"  y2="175" stroke="#333" stroke-width="2"/>
+      <!-- Axis arrows -->
+      <polygon points="295,175 284,170 284,180" fill="#333"/>
+      <polygon points="55,18 50,29 60,29"         fill="#333"/>
+      <!-- X labels: 0,2,4,6,8,10  — origin x=55, each 2 pieces = 40px -->
+      <text x="55"  y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">0</text>
+      <text x="95"  y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">2</text>
+      <text x="135" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">4</text>
+      <text x="175" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">6</text>
+      <text x="215" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">8</text>
+      <text x="255" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">10</text>
+      <!-- X ticks -->
+      <line x1="95"  y1="173" x2="95"  y2="177" stroke="#333" stroke-width="1.5"/>
+      <line x1="135" y1="173" x2="135" y2="177" stroke="#333" stroke-width="1.5"/>
+      <line x1="175" y1="173" x2="175" y2="177" stroke="#333" stroke-width="1.5"/>
+      <line x1="215" y1="173" x2="215" y2="177" stroke="#333" stroke-width="1.5"/>
+      <line x1="255" y1="173" x2="255" y2="177" stroke="#333" stroke-width="1.5"/>
+      <!-- Y labels: 0,30,60,90,120 — scale: 120 cal → 150px, so 1 cal = 1.25px; y=175−cal*1.25 -->
+      <!-- 30→y=137.5≈138, 60→y=100, 90→y=62.5≈63, 120→y=25 -->
+      <text x="49" y="179" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">0</text>
+      <text x="49" y="142" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">30</text>
+      <text x="49" y="104" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">60</text>
+      <text x="49" y="67"  text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">90</text>
+      <text x="49" y="29"  text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">120</text>
+      <!-- Y ticks -->
+      <line x1="53" y1="138" x2="57" y2="138" stroke="#333" stroke-width="1.5"/>
+      <line x1="53" y1="100" x2="57" y2="100" stroke="#333" stroke-width="1.5"/>
+      <line x1="53" y1="63"  x2="57" y2="63"  stroke="#333" stroke-width="1.5"/>
+      <line x1="53" y1="25"  x2="57" y2="25"  stroke="#333" stroke-width="1.5"/>
+      <!-- Light grid -->
+      <line x1="55" y1="138" x2="295" y2="138" stroke="#eee" stroke-width="1"/>
+      <line x1="55" y1="100" x2="295" y2="100" stroke="#eee" stroke-width="1"/>
+      <line x1="55" y1="63"  x2="295" y2="63"  stroke="#eee" stroke-width="1"/>
+      <line x1="55" y1="25"  x2="295" y2="25"  stroke="#eee" stroke-width="1"/>
+      <!-- Data line: (0,0)→(8,120). svg: (55,175)→(215,25) -->
+      <line x1="55" y1="175" x2="215" y2="25" stroke="#1a4e8c" stroke-width="2.5"/>
+      <!-- Data points: pieces 2,4,6,8 → x=95,135,175,215; cal 30,60,90,120 → y=138,100,63,25 -->
+      <circle cx="95"  cy="138" r="5" fill="#1a4e8c" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="135" cy="100" r="5" fill="#1a4e8c" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="175" cy="63"  r="5" fill="#1a4e8c" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="215" cy="25"  r="5" fill="#1a4e8c" stroke="#fff" stroke-width="1.5"/>
+      <!-- Axis titles -->
+      <text x="175" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-style="italic" fill="#333">Pieces of Candy</text>
+      <text x="10" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-style="italic" fill="#333" transform="rotate(-90,10,100)">Calories</text>
+    </svg>
+  </div>
+
+  <p>Based on the graph, how many calories are in <strong>1 piece</strong> of candy?</p>
+  <ol class="ch">
+    <li data-l="A"><span class="fr"><span class="n">1</span><span class="d">20</span></span></li>
+    <li data-l="B"><span class="fr"><span class="n">1</span><span class="d">15</span></span></li>
+    <li data-l="C">15</li>
+    <li data-l="D">60</li>
+  </ol>
+</div>
+<hr>
+
+<!-- Q5 -->
+<div class="question no-break">
+  <div class="qlabel">Question 5</div>
+  <p>Lee mows <span class="fr"><span class="n">1</span><span class="d">3</span></span> of his lawn and uses <span class="fr"><span class="n">1</span><span class="d">2</span></span> gallon of gas.</p>
+  <p>What fraction of his lawn can Lee mow using <strong>one full gallon</strong> of gas?</p>
+  <ol class="ch">
+    <li data-l="A"><span class="fr"><span class="n">1</span><span class="d">6</span></span></li>
+    <li data-l="B"><span class="fr"><span class="n">5</span><span class="d">6</span></span></li>
+    <li data-l="C"><span class="fr"><span class="n">2</span><span class="d">3</span></span></li>
+    <li data-l="D"><span class="fr"><span class="n">3</span><span class="d">2</span></span></li>
+  </ol>
+</div>
+
+<div class="band-math">CALCULATOR ALLOWED &mdash; Questions 6&ndash;10</div>
+
+<!-- Q6 — DIAGRAM: Supplementary angles -->
+<div class="question no-break">
+  <div class="qlabel">Question 6</div>
+  <p>The diagram below shows two angles that together form a straight line.</p>
+
+  <div class="diagwrap">
+    <svg width="360" height="145" viewBox="0 0 360 145" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two supplementary angles on a straight line. Left angle labeled (3x+15) degrees, right angle labeled 60 degrees. A ray extends upward from the vertex.">
+      <!-- Straight horizontal line with arrows -->
+      <line x1="22" y1="105" x2="338" y2="105" stroke="#222" stroke-width="2.5"/>
+      <polygon points="22,105 35,99 35,111"  fill="#222"/>
+      <polygon points="338,105 325,99 325,111" fill="#222"/>
+      <!-- Ray from vertex at (180,105), going up-right at 60° from right horizontal -->
+      <!-- endpoint: (180 + 90·cos60°, 105 − 90·sin60°) = (180+45, 105−77.9) = (225, 27) -->
+      <line x1="180" y1="105" x2="225" y2="27" stroke="#222" stroke-width="2.5"/>
+      <polygon points="225,27 216,42 228,39" fill="#222"/>
+      <!-- Vertex dot -->
+      <circle cx="180" cy="105" r="3.5" fill="#222"/>
+      <!-- Arc indicating 60° angle (right side) — radius 28, from (208,105) sweeping CCW to point on ray -->
+      <!-- Point on ray at dist 28: (180+28·0.5, 105−28·0.866)=(194, 81.8) -->
+      <path d="M 208,105 A 28,28 0 0,0 194,81" fill="none" stroke="#555" stroke-width="1.8"/>
+      <!-- Arc indicating (3x+15)° angle (left side) — just a small arc near vertex -->
+      <path d="M 152,105 A 28,28 0 0,1 166,81" fill="none" stroke="#555" stroke-width="1.8"/>
+      <!-- Labels -->
+      <text x="210" y="101" font-family="Georgia,serif" font-size="15" fill="#222">60°</text>
+      <text x="44"  y="96"  font-family="Georgia,serif" font-size="15" fill="#222">(3<tspan font-style="italic">x</tspan> + 15)°</text>
+    </svg>
+  </div>
+
+  <p>What is the value of <em>x</em>?</p>
+  <ol class="ch">
+    <li data-l="A">5</li>
+    <li data-l="B">15</li>
+    <li data-l="C">35</li>
+    <li data-l="D">120</li>
+  </ol>
+</div>
+<hr>
+
+<!-- Q7 -->
+<div class="question no-break">
+  <div class="qlabel">Question 7</div>
+  <p>Marcus drew a scale drawing of the rectangular park in his neighborhood. On his drawing, the length is <strong>8 inches</strong> and the width is <strong>6 inches</strong>. The key shows <strong>1 inch&nbsp;=&nbsp;20 feet</strong>.</p>
+  <p>What is the <strong>actual area</strong> of the park in square feet?</p>
+  <ol class="ch">
+    <li data-l="A">560 sq ft</li>
+    <li data-l="B">960 sq ft</li>
+    <li data-l="C">5,600 sq ft</li>
+    <li data-l="D">19,200 sq ft</li>
+  </ol>
+</div>
+<hr>
+
+<!-- Q8 -->
+<div class="question no-break">
+  <div class="qlabel">Question 8</div>
+  <p>Shirts are on sale for <strong>30% off</strong>. The original price of one shirt is <strong>$15</strong>.</p>
+  <p>What is the <strong>total cost</strong>, in dollars, of <strong>2 shirts</strong> at the sale price, including <strong>7% sales tax</strong>?</p>
+  <p>Answer: $<span class="ans-line"></span>&nbsp;&nbsp;<em>Show your work below.</em></p>
+  <div class="workspace" style="height:100px;"></div>
+</div>
+<hr>
+
+<!-- Q9 — DIAGRAM: Sandwiches proportional graph -->
+<div class="question no-break">
+  <div class="qlabel">Question 9</div>
+  <p>The graph below shows the relationship between the number of sandwiches purchased and their total cost.</p>
+
+  <div class="diagwrap">
+    <svg width="310" height="215" viewBox="0 0 310 215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line graph: Sandwich Costs. Y-axis: Cost in dollars 0 to 16. X-axis: Number of Sandwiches 0 to 4. Points at (1,4),(2,8),(3,12),(4,16).">
+      <!-- Title -->
+      <text x="165" y="14" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#222">Sandwich Costs</text>
+      <!-- Axes -->
+      <line x1="55" y1="178" x2="285" y2="178" stroke="#333" stroke-width="2"/>
+      <line x1="55" y1="22"  x2="55"  y2="178" stroke="#333" stroke-width="2"/>
+      <!-- Arrows -->
+      <polygon points="285,178 274,173 274,183" fill="#333"/>
+      <polygon points="55,22 50,33 60,33"        fill="#333"/>
+      <!-- X labels: 0–4 sandwiches. Width 230px/4 = 57.5px per unit. x=55+sandwich·57.5 -->
+      <text x="55"  y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">0</text>
+      <text x="113" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">1</text>
+      <text x="170" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">2</text>
+      <text x="228" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">3</text>
+      <text x="285" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#444">4</text>
+      <!-- X ticks -->
+      <line x1="113" y1="176" x2="113" y2="180" stroke="#333" stroke-width="1.5"/>
+      <line x1="170" y1="176" x2="170" y2="180" stroke="#333" stroke-width="1.5"/>
+      <line x1="228" y1="176" x2="228" y2="180" stroke="#333" stroke-width="1.5"/>
+      <!-- Y labels: 0,4,8,12,16. Height 156px/16 = 9.75px per $. y=178−$·9.75 -->
+      <!-- $4→y=139, $8→y=100, $12→y=61, $16→y=22 -->
+      <text x="49" y="182" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">0</text>
+      <text x="49" y="143" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">4</text>
+      <text x="49" y="104" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">8</text>
+      <text x="49" y="65"  text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">12</text>
+      <text x="49" y="26"  text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#444">16</text>
+      <!-- Y ticks -->
+      <line x1="53" y1="139" x2="57" y2="139" stroke="#333" stroke-width="1.5"/>
+      <line x1="53" y1="100" x2="57" y2="100" stroke="#333" stroke-width="1.5"/>
+      <line x1="53" y1="61"  x2="57" y2="61"  stroke="#333" stroke-width="1.5"/>
+      <line x1="53" y1="22"  x2="57" y2="22"  stroke="#333" stroke-width="1.5"/>
+      <!-- Light grid -->
+      <line x1="55" y1="139" x2="285" y2="139" stroke="#eee" stroke-width="1"/>
+      <line x1="55" y1="100" x2="285" y2="100" stroke="#eee" stroke-width="1"/>
+      <line x1="55" y1="61"  x2="285" y2="61"  stroke="#eee" stroke-width="1"/>
+      <line x1="55" y1="22"  x2="285" y2="22"  stroke="#eee" stroke-width="1"/>
+      <!-- Data line: (0,0)→(4,16). svg: (55,178)→(285,22) -->
+      <line x1="55" y1="178" x2="285" y2="22" stroke="#1a6b3c" stroke-width="2.5"/>
+      <!-- Data points: (1,4)→(113,139), (2,8)→(170,100), (3,12)→(228,61), (4,16)→(285,22) -->
+      <circle cx="113" cy="139" r="6" fill="#1a6b3c" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="170" cy="100" r="6" fill="#1a6b3c" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="228" cy="61"  r="6" fill="#1a6b3c" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="285" cy="22"  r="6" fill="#1a6b3c" stroke="#fff" stroke-width="1.5"/>
+      <!-- Axis titles -->
+      <text x="170" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-style="italic" fill="#333">Number of Sandwiches</text>
+      <text x="11" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-style="italic" fill="#333" transform="rotate(-90,11,100)">Cost ($)</text>
+    </svg>
+  </div>
+
+  <p><strong>Part A:</strong> What is the cost, in dollars, of <strong>one</strong> sandwich?</p>
+  <p>Answer: $<span class="ans-line"></span></p>
+
+  <p style="margin-top:12px;"><strong>Part B:</strong> What is the meaning of the point <strong>(3,&thinsp;12)</strong> on the graph?</p>
+  <ol class="ch">
+    <li data-l="M">For $3 you can buy 3 sandwiches.</li>
+    <li data-l="P">For $3 you can buy 12 sandwiches.</li>
+    <li data-l="R">For $12 you can buy 3 sandwiches.</li>
+    <li data-l="S">For $12 you can buy 12 sandwiches.</li>
+  </ol>
+</div>
+<hr>
+
+<!-- Q10 -->
+<div class="question no-break">
+  <div class="qlabel">Question 10</div>
+  <p>Over the summer, Marty read <strong>4 times as many pages</strong> as the number of pages Nelson and Jennifer read <strong>combined</strong>. Marty read <strong>1,860 pages</strong> and Nelson read <strong>240 pages</strong>.</p>
+  <p><strong>Part A:</strong> Select the equation that could be solved to find the number of pages, <em>p</em>, that Jennifer read.</p>
+  <ol class="ch">
+    <li data-l="A">1,860 + 240 = 4<em>p</em></li>
+    <li data-l="B">4(240 + <em>p</em>) = 1,860</li>
+    <li data-l="C">1,860 &minus; (960 &divide; 4) = <em>p</em></li>
+    <li data-l="D">240 + 4<em>p</em> = 1,860</li>
+  </ol>
+  <p style="margin-top:12px;"><strong>Part B:</strong> How many pages did Jennifer read?</p>
+  <p>Answer:&nbsp;<span class="ans-line"></span>&nbsp;&nbsp;<em>Show your work below.</em></p>
+  <div class="workspace" style="height:100px;"></div>
+</div>
+
+<p class="sec-end">&mdash; End of Section A: Mathematics &mdash;</p>
+<hr>
+
+<!-- ═══════════════════════ SECTION B: ELA ═══════════════════════ -->
+<h1 class="ela-title">SECTION B: ENGLISH LANGUAGE ARTS</h1>
+
+<p><strong>Directions:</strong> Read each passage carefully, then answer the questions that follow. For multiple-choice questions, circle the letter of the best answer.</p>
+
+<h2 class="pass-title">PASSAGE 1 &mdash; Informational Text</h2>
+<p><em>Read the article below. Then answer Questions 11&ndash;15.</em></p>
+
+<div class="pass-box">
+  <h3>Prairie Dogs: Little Rodents That Talk Big</h3>
+  <p class="byline">by Cynthia Mills</p>
+
+  <p><span class="pnum">1</span>Prairie dogs got their name because people thought their calls sounded a little like a dog&rsquo;s bark. Actually, maybe they should&rsquo;ve been called prairie watchdogs because they bark to alert the colony when intruders enter their territory.</p>
+  <p><span class="pnum">2</span>From the wagging tail of a happy dog, to the bristling fur and spitting yowls of an angry cat, animals can definitely get their messages across. Dr. Con Slobodchikoff, a biologist at Northern Arizona University, thinks that at least one animal &mdash; the lowly prairie dog &mdash; can say a lot.</p>
+  <p><span class="pnum">3</span>Prairie dog alarms are distinctive. The sound is halfway between the buzzing of a kazoo and the squawk of a disturbed crow, and can be heard from three miles away. It&rsquo;s hard for humans to hear the differences between the calls, though, because they only last about half a second &mdash; about as long as it takes to say &ldquo;Hey!&rdquo; really fast.</p>
+  <p><span class="pnum">4</span>So Dr. Slobodchikoff decided to record the calls. He ran the sounds through a computer that would slow them down and turn them into detailed pictures called spectrograms. Using spectrograms, he could compare one sound to another and see if they were different.</p>
+  <p><span class="pnum">5</span>The spectrograms showed that prairie dogs make different alarm calls for hawks than for coyotes and other land-bound threats. But while the calls for flying hunters like hawks were pretty much the same, the calls for animals on the ground &mdash; for dogs, cats, or humans &mdash; were different from one another.</p>
+  <p><span class="pnum">6</span>Were the prairie dogs saying more than &ldquo;Look out above&rdquo; and &ldquo;Look out below&rdquo;? Slobodchikoff recorded the calls over and over again. He not only recorded the prairie dogs&rsquo; alarm calls while students or dogs walked by, but also when plywood cutouts of a coyote, a skunk, and a simple oval were placed nearby.</p>
+  <p><span class="pnum">7</span>The prairie dogs watched regular dogs the same way they watched coyotes, but not as intensely. Their reactions to humans depended on past experience. In an area where humans had long hunted them, the prairie dogs dove into their burrows to hide; in places where people left them alone, they didn&rsquo;t react much at all. The prairie dogs responded to the cutouts in various ways, but not the same way they did to a real predator.</p>
+  <p><span class="pnum">8</span>The calls were even different when people wore different clothes! There was a call for a human in a white T-shirt and another for a human in a yellow T-shirt. Then Slobodchikoff tried different types of dogs, using huskies, retrievers, and even a miniature poodle. Again the calls changed for the type of dog.</p>
+  <p><span class="pnum">9</span>At first Slobodchikoff couldn&rsquo;t believe it. After all, prairie dogs are just rodents, like mice and rats, and aren&rsquo;t supposed to be that smart. So he worked harder to prove his findings, testing them again and again. Every time the results were the same.</p>
+  <p><span class="pnum">10</span>The prairie dogs were telling each other some pretty detailed things: not just &ldquo;Watch out!&rdquo; but &ldquo;Look, there&rsquo;s a guy with his dog, but they look harmless.&rdquo; Although the calls are a single sound, or at least a continuous one, they seem to carry a lot of information.</p>
+  <p><span class="pnum">11</span>Slobodchikoff also thinks prairie dogs pay attention to the order of the sounds they make. Besides studying alarm calls, he has also recorded the little noises, the chitter-chattering, they make to each other. Since the prairie dogs don&rsquo;t do anything when they hear these sounds (for example, they don&rsquo;t duck or dive into a hole as they do when they hear an alarm call), he doesn&rsquo;t know if the sounds have any meaning. But prairie dogs do seem to make the sounds in particular orders: They chitter-chatter, but they don&rsquo;t chatter-chitter. Does the order of the sounds matter? If so, it might mean that their &ldquo;language&rdquo; is even more complicated than we thought.</p>
+  <p><span class="pnum">12</span>Though Slobodchikoff may not have proved that prairie dogs actually talk, he has found out what most of us have suspected all along: Animals have a lot to tell us. We just have to find out the best ways to listen.</p>
+</div>
+
+<div class="question no-break">
+  <div class="qlabel">Question 11</div>
+  <p>According to paragraph 3, the calls of prairie dogs are &ldquo;distinctive&rdquo; because they</p>
+  <ol class="ch">
+    <li data-l="A">are understood by other animals</li>
+    <li data-l="B">tend to be short</li>
+    <li data-l="C">convey important information</li>
+    <li data-l="D">are unique sounds</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 12</div>
+  <p>Which claim by the author is <strong>most strongly</strong> supported with evidence in the article?</p>
+  <ol class="ch">
+    <li data-l="A">&ldquo;Prairie dogs got their name because people thought their calls sounded a little like a dog&rsquo;s bark.&rdquo; (paragraph&nbsp;1)</li>
+    <li data-l="B">&ldquo;It&rsquo;s hard for humans to hear the differences between the calls, though, because they only last about half a second&nbsp;.&nbsp;.&nbsp;.&rdquo; (paragraph&nbsp;3)</li>
+    <li data-l="C">&ldquo;The prairie dogs watched regular dogs the same way they watched coyotes, but not as intensely.&rdquo; (paragraph&nbsp;7)</li>
+    <li data-l="D">&ldquo;Slobodchikoff also thinks prairie dogs pay attention to the order of the sounds&nbsp;.&nbsp;.&nbsp;.&rdquo; (paragraph&nbsp;11)</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 13</div>
+  <p>Read this sentence from paragraph 9:</p>
+  <div class="pullq"><em>At first Slobodchikoff couldn&rsquo;t believe it.</em></div>
+  <p>Which statement provides the <strong>best</strong> support for this claim?</p>
+  <ol class="ch">
+    <li data-l="A">Prairie dogs have almost the same response to coyotes as they do to regular dogs they encounter.</li>
+    <li data-l="B">Prairie dogs have similar reactions to airborne predators, although they have a variety of responses to land animals.</li>
+    <li data-l="C">Prairie dogs have unique responses to people wearing different colors as well as to various types of dogs.</li>
+    <li data-l="D">Prairie dogs have alarm calls they use to warn their colonies, although their calls provoke little response.</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 14</div>
+  <p>Which statement <strong>best</strong> represents a central idea of the article?</p>
+  <ol class="ch">
+    <li data-l="A">&ldquo;Actually, maybe they should&rsquo;ve been called prairie watchdogs because they bark to alert the colony&nbsp;.&nbsp;.&nbsp;.&rdquo; (paragraph&nbsp;1)</li>
+    <li data-l="B">&ldquo;After all, prairie dogs are just rodents, like mice and rats, and aren&rsquo;t supposed to be that smart.&rdquo; (paragraph&nbsp;9)</li>
+    <li data-l="C">&ldquo;Although the calls are a single sound, or at least a continuous one, they seem to carry a lot of information.&rdquo; (paragraph&nbsp;10)</li>
+    <li data-l="D">&ldquo;Besides studying alarm calls, he has also recorded the little noises, the chitter-chattering&nbsp;.&nbsp;.&nbsp;.&rdquo; (paragraph&nbsp;11)</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 15</div>
+  <p>The <strong>main</strong> reason spectrograms are important to Slobodchikoff&rsquo;s research is because they</p>
+  <ol class="ch">
+    <li data-l="A">suggest to researchers that prairie dogs respond to different clothes</li>
+    <li data-l="B">help researchers analyze prairie dog alarm calls from several miles away</li>
+    <li data-l="C">enable researchers to hear slowed-down prairie dog alarm calls</li>
+    <li data-l="D">allow researchers to compare many prairie dog alarm calls</li>
+  </ol>
+</div>
+
+<hr>
+
+<h2 class="pass-title">PASSAGE 2 &mdash; Literary Text</h2>
+<p><em>Read the story below. Then answer Questions 16&ndash;19 and Question 20.</em></p>
+<p class="context"><em>Nine-year-old Cassie Logan and her three brothers are on their way to school. It is the first day of a new school year.</em></p>
+
+<div class="pass-box">
+  <h3>Excerpt from <em>Roll of Thunder, Hear My Cry</em></h3>
+  <p class="byline">by Mildred D. Taylor</p>
+
+  <p><span class="pnum">1</span>My youngest brother paid no attention to me. Grasping more firmly his newspaper-wrapped notebook and his tin-can lunch of cornbread and oil sausages, he continued to concentrate on the dusty road. He lagged several feet behind my other brothers, Stacey and Christopher-John, and me, attempting to keep the rusty Mississippi dust from swelling with each step and drifting back upon his shiny black shoes and the cuffs of his corduroy pants by lifting each foot high before setting it gently down again. Always meticulously neat, six-year-old Little Man never allowed dirt or tears or stains to mar anything he owned. Today was no exception.&nbsp;.&nbsp;.&nbsp;.</p>
+  <p><span class="pnum">2</span>&ldquo;Y&rsquo;all go ahead and get dirty if y&rsquo;all wanna,&rdquo; he replied without even looking up from his studied steps. &ldquo;Me, I&rsquo;m gonna stay clean.&rdquo;&nbsp;.&nbsp;.&nbsp;.</p>
+  <p><span class="pnum">3</span>&ldquo;Ah, Cassie, leave him be,&rdquo; Stacey admonished,<sup>1</sup> frowning and kicking testily at the road.</p>
+  <p><span class="pnum">4</span>&ldquo;I ain&rsquo;t said nothing but&mdash;&rdquo;</p>
+  <p><span class="pnum">5</span>Stacey cut me a wicked look and I grew silent. His disposition had been irritatingly<sup>2</sup> sour lately. If I hadn&rsquo;t known the cause of it, I could have forgotten very easily that he was, at twelve, bigger than I, and that I had promised Mama to arrive at school looking clean and ladylike. &ldquo;Shoot,&rdquo; I mumbled finally, unable to restrain myself from further comment, &ldquo;it ain&rsquo;t my fault you gotta be in Mama&rsquo;s class this year.&rdquo;</p>
+  <p><span class="pnum">6</span>Stacey&rsquo;s frown deepened and he jammed his fists into his pockets, but said nothing.</p>
+  <p><span class="pnum">7</span>Christopher-John, walking between Stacey and me, glanced uneasily at both of us but did not interfere. A short, round boy of seven, he took little interest in troublesome things, preferring to remain on good terms with everyone. Yet he was always sensitive to others and now, shifting the handle of his lunch can from his right hand to his right wrist and his smudged notebook from his left hand to his left armpit, he stuffed his free hands into his pockets and attempted to make his face as moody as Stacey&rsquo;s and as cranky as mine. But after a few moments he seemed to forget that he was supposed to be grouchy and began whistling cheerfully. There was little that could make Christopher-John unhappy for very long, not even the thought of school.</p>
+  <p><span class="pnum">8</span>I tugged again at my collar and dragged my feet in the dust, allowing it to sift back onto my socks and shoes like gritty red snow. I hated the dress. And the shoes. There was little I could do in a dress, and as for shoes, they imprisoned freedom-loving feet accustomed to the feel of warm earth.</p>
+  <p><span class="pnum">9</span>&ldquo;Cassie, stop that,&rdquo; Stacey snapped as the dust billowed in swirling clouds around my feet. I looked up sharply, ready to protest. Christopher-John&rsquo;s whistling increased to a raucous,<sup>3</sup> nervous shrill, and grudgingly I let the matter drop and trudged along in moody silence, my brothers growing as pensively<sup>4</sup> quiet as I.</p>
+  <p><span class="pnum">10</span>Before us the narrow, sun-splotched road wound like a lazy red serpent dividing the high forest bank of quiet, old trees on the left from the cotton field, forested by giant green and purple stalks, on the right. A barbed-wire fence ran the length of the deep field, stretching eastward for over a quarter of a mile until it met the sloping green pasture that signaled the end of our family&rsquo;s four hundred acres. An ancient oak tree on the slope, visible even now, was the official dividing mark between Logan land and the beginning of a dense forest. Beyond the protective fencing of the forest, vast farming fields, worked by a multitude<sup>5</sup> of share-cropping families, covered two thirds of a ten-square-mile plantation. That was Harlan Granger land.</p>
+  <p><span class="pnum">11</span>Once our land had been Granger land too, but the Grangers had sold it during Reconstruction to a Yankee for tax money. In 1887, when the land was up for sale again, Grandpa had bought two hundred acres of it, and in 1918, after the first two hundred acres had been paid off, he had bought another two hundred. It was good rich land, much of it still virgin forest, and there was no debt on half of it. But there was a mortgage on the two hundred acres bought in 1918 and there were taxes on the full four hundred, and for the past three years there had not been enough money from the cotton to pay both and live on too.</p>
+  <p><span class="pnum">12</span>That was why Papa had gone to work on the railroad.</p>
+  <p><span class="pnum">13</span>In 1930 the price of cotton dropped. And so, in the spring of 1931, Papa set out looking for work, going as far north as Memphis and as far south as the Delta country. He had gone west too, into Louisiana. It was there he found work laying track for the railroad. He worked the remainder of the year away from us, not returning until the deep winter when the ground was cold and barren. The following spring after planting was finished, he did the same. Now it was 1933, and Papa was again in Louisiana laying track.</p>
+  <p><span class="pnum">14</span>I asked him once why he had to go away, why the land was so important. He took my hand and said in his quiet way: &ldquo;Look out there, Cassie girl. All that belongs to you. You ain&rsquo;t never had to live on nobody&rsquo;s place but your own and long as I live and the family survives, you&rsquo;ll never have to. That&rsquo;s important. You may not understand that now, but one day you will. Then you&rsquo;ll see.&rdquo;</p>
+
+  <div class="fn">
+    <sup>1</sup>&nbsp;<strong>admonished:</strong> scolded &nbsp;&nbsp;
+    <sup>2</sup>&nbsp;<strong>irritatingly:</strong> in a way that bothers &nbsp;&nbsp;
+    <sup>3</sup>&nbsp;<strong>raucous:</strong> rowdy &nbsp;&nbsp;
+    <sup>4</sup>&nbsp;<strong>pensively:</strong> thoughtfully &nbsp;&nbsp;
+    <sup>5</sup>&nbsp;<strong>multitude:</strong> huge number
+  </div>
+</div>
+
+<div class="question no-break">
+  <div class="qlabel">Question 16</div>
+  <p>Read this phrase from paragraph 8:</p>
+  <div class="pullq"><em>&ldquo;.&nbsp;.&nbsp;. and as for shoes, they imprisoned freedom-loving feet accustomed to the feel of warm earth.&rdquo;</em></div>
+  <p>How does the use of personification in this phrase <strong>mainly</strong> add to the reader&rsquo;s understanding of the narrator?</p>
+  <ol class="ch">
+    <li data-l="A">by emphasizing the narrator&rsquo;s preference for being outside</li>
+    <li data-l="B">by illustrating how the narrator feels about school</li>
+    <li data-l="C">by showing how the narrator is different from Little Man</li>
+    <li data-l="D">by highlighting the narrator&rsquo;s desire to help Papa</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 17</div>
+  <p>Which detail would be <strong>most</strong> important to include in a summary of the story?</p>
+  <ol class="ch">
+    <li data-l="A">&ldquo;Always meticulously neat, six-year-old Little Man never allowed dirt or tears or stains to mar anything he owned.&rdquo; (paragraph&nbsp;1)</li>
+    <li data-l="B">&ldquo;If I hadn&rsquo;t known the cause of it, I could have forgotten very easily that he was, at twelve, bigger than I&nbsp;.&nbsp;.&nbsp;.&rdquo; (paragraph&nbsp;5)</li>
+    <li data-l="C">&ldquo;An ancient oak tree on the slope, visible even now, was the official dividing mark between Logan land and the beginning of a dense forest.&rdquo; (paragraph&nbsp;10)</li>
+    <li data-l="D">&ldquo;.&nbsp;.&nbsp;. for the past three years there had not been enough money from the cotton to pay both and live on too.&rdquo; (paragraph&nbsp;11)</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 18</div>
+  <p><em>Siblings may be very different but still completely understand each other.</em> How do the details in the story <strong>best</strong> support this idea?</p>
+  <ol class="ch">
+    <li data-l="A">The narrator describes the traits of each brother as they walk to school.</li>
+    <li data-l="B">The narrator and her brothers understand the importance of the land to their family.</li>
+    <li data-l="C">The narrator realizes why her oldest brother is feeling unhappy.</li>
+    <li data-l="D">The narrator and her brothers respect their father&rsquo;s decision to work in other states.</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="qlabel">Question 19</div>
+  <p>What do the details in the story reveal about Papa?</p>
+  <ol class="ch">
+    <li data-l="A">He prefers working on the railroad to growing cotton.</li>
+    <li data-l="B">He was not surprised when the price of cotton changed.</li>
+    <li data-l="C">He is determined to keep the land his father purchased.</li>
+    <li data-l="D">He was not able to talk to his other children about the land.</li>
+  </ol>
+</div>
+<hr>
+
+<div class="question no-break">
+  <div class="sa-prompt">
+    <strong>Question 20 &mdash; Short Response</strong>&nbsp;&nbsp;|&nbsp;&nbsp;<em>Write 3&ndash;5 complete sentences</em>
+  </div>
+  <p>What is a <strong>central idea</strong> of &ldquo;Excerpt from <em>Roll of Thunder, Hear My Cry</em>&rdquo;? Use <strong>two specific details</strong> from the story to support your response.</p>
+  <div class="sa-lines">
+    <span class="sa-line"></span>
+    <span class="sa-line"></span>
+    <span class="sa-line"></span>
+    <span class="sa-line"></span>
+    <span class="sa-line"></span>
+  </div>
+</div>
+
+<p class="sec-end">&mdash; End of Section B: English Language Arts &mdash;</p>
+
+<p class="footer">Assessment compiled from: Tennessee TCAP Grade 7 Math Practice Test &middot; Mississippi MAAP Grade 7 Math Practice Test &middot; NY State Grade 7 ELA Released Items (2024). All materials publicly released for educational use.</p>
+
+</body>
+</html>
